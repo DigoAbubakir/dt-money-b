@@ -24,4 +24,8 @@ public class TransactionService {
     public List<Transaction> listAll() {
         return transactionRepository.findAll();
     }
+
+    public Transaction findById(Long id) {
+        return transactionRepository.findById(id).orElse(null);
+    }
 }
